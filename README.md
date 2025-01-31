@@ -50,20 +50,16 @@ Not all 8 Puzzle configurations are solvable. The **solvability** of a given ini
 1. **Manhattan Distance**:
    - Calculates the total distance of all tiles from their target positions.
    - Formula:  
-     \[
-     f(x) = g(x) + h(x)
-     \]  
+     $f(x) = g(x) + h(x)$
      Where:
-     - \(f(x)\): Total cost (path + heuristic)
-     - \(g(x)\): Path cost (number of moves so far)
-     - \(h(x)\): Manhattan distance (heuristic)
+     - $$f(x)$$: Total cost (path + heuristic)
+     - $$g(x)$$: Path cost (number of moves so far)
+     - $$h(x)$$: Manhattan distance (heuristic)
 
 2. **Misplaced Tiles**:
    - Counts the number of tiles not in their goal positions.
    - Formula:  
-     \[
-     f(x) = h(x)
-     \]
+     $$f(x) = h(x)$$
 
 ---
 
@@ -86,21 +82,21 @@ Each game state is treated as a **node** in a tree. From a given state:
 
 ### Priority Queue and A* Search
 
-- The **priority queue** ensures nodes with the lowest cost (\(f(x)\)) are explored first.
+- The **priority queue** ensures nodes with the lowest cost $$f(x)$$ are explored first.
 - Nodes are added to the **open list** for exploration and moved to the **explored list** once visited.
 
 ### Informed Search Strategies
 
 The project uses the **A*** algorithm, which combines:
-1. **Path cost** (\(g(x)\)): Number of moves made so far.
-2. **Heuristic value** (\(h(x)\)): Estimated cost to reach the goal.
+1. **Path cost** $$g(x)$$: Number of moves made so far.
+2. **Heuristic value** $$h(x)$$: Estimated cost to reach the goal.
 
 ---
 
 ## How to Run
 
 ### Requirements
-- A C++ compiler (e.g., GCC).
+- A C++ compiler (e.g., GCC, MSVC).
 - A terminal or IDE to run the program.
 
 ### Steps
